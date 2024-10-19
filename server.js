@@ -1,12 +1,25 @@
-const express=require('express')
+const express=require('express');
+const dotenv=require('dotenv');
+const colors=require('colors');
+const morgan=require('morgan');
+const cors=require('cors');
+const connectDB = require('./config/db');
 
-const app=express()
+dotenv.config();
+
+connectDB();
+
+const app=express();
+
+app.use(express.json())
+app.use(cors())
+app.use(morgan('dev'))
 
 
 app.use("/api/v1/test",require('./routes/testRoutes'))
 
-const PORT=3000
+const PORT=process.env.PORT||3000;
 
 app.listen(PORT,()=>{
-    console.log("Node Server Running");
+    console.log(`Node Server Running in ${process.env.DEV_MODE} mode on port ${process.env.PORT}`.bgBlue.white);
 });
