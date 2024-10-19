@@ -1,0 +1,11 @@
+{
+  "name": "blood_donation",
+  "version": "1.0.0",
+  "description": "Mini project blood bank management",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Saakshi J.Shetty-NNM23MC120",
+  "license": "ISC"
+}
