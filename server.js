@@ -2,12 +2,8 @@ const express=require('express')
 
 const app=express()
 
-app.get('/',(req,res)=>{
-    res.status(200).json({message:"Welcome to Blood Bank App",
 
-    });
-});
-
+app.use("/api/v1/test",require('./routes/testRoutes'))
 
 const PORT=3000
 
