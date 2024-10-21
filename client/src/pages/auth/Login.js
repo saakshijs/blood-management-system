@@ -1,4 +1,5 @@
 import React  from "react";
+import Form from "../../components/Shared/Form/Form";
 
 const Login =()=>{
     return(
@@ -9,7 +10,7 @@ const Login =()=>{
         </div>  
           <div className="col-md-4 form-container">
        
-            login
+            <Form formTitle={'Login Page'} submitBtn={'Login'}/>
             </div> 
         </div>
         </>
