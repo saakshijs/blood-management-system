@@ -1,7 +1,7 @@
 import React,{useState} from "react";
 import InputType from "./InputType";
 
-const Form =(submitBtn,formTitle) => {
+const Form =({submitBtn,formTitle}) => {
     const[email,setEmail]=useState('')
     const[password,setPassword]=useState('')
     return(
