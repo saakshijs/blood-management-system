@@ -52,6 +52,12 @@ const loginController =async(req,res)=>{
             message:'Invalid Credentials'
         })
      }
+     if(user.role !==req.body.role){
+        return res.status(500).send({
+            success:false,
+            message:"role doesnot match",
+        });
+     }
      const token=jwt.sign({userId:user._id},process.env.JWT_SECRET,{expiresIn:'1d'})
      return res.status(200).send({
         success:true,
