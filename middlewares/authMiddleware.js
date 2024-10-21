@@ -12,7 +12,7 @@ module.exports=async(req,res,next)=>{
                 })
             
             }else{
-                req.body.userId=decode.id;
+                req.body.userId=decode.userid;
                 next();
 
             }
@@ -27,4 +27,3 @@ module.exports=async(req,res,next)=>{
     }
 }
 
-module.exports={authMiddleware};
